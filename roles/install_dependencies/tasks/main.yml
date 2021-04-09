@@ -51,3 +51,8 @@
   apt:
     name: "pkg-config"
     state: latest
+
+- name: "Install libass-dev"
+  apt:
+    name: "libass-dev"
+    state: latest
