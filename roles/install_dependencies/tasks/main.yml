@@ -39,11 +39,6 @@
     name: "automake"
     state: latest
 
-- name: "Install libavformat-dev"
-  apt:
-    name: "libavformat-dev"
-    state: latest
-
 - name: "Install libtool"
   apt:
     name: "libtool"
