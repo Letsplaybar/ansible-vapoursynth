@@ -1,4 +1,9 @@
 ---
+- name: "Install libavformat-dev"
+  apt:
+    name: "libavformat-dev"
+    state: latest
+
 - name: "Clone ffms2"
   git:
     repo: "https://github.com/FFMS/ffms2.git"
