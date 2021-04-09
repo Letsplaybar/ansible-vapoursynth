@@ -1,0 +1,12 @@
+---
+- name: "Setup VapourSynth"
+  hosts: "{{ target if target is defined else 'vapoursynth_servers'}}"
+  remote_user: "{{ user | default('root') }}"
+  become: true
+  vars:
+    ansible_port: "{{ ssh_port | default('22') }}"
+  roles:
+    - install_pip
+    - install_git
+    - install_dependencies
+    - compile_vapoursynth

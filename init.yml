@@ -1,0 +1,11 @@
+---
+- name: "Initial Python installation"
+  hosts: "{{ target if target is defined else 'vapoursynth_servers' }}"
+  gather_facts: false
+  remote_user: "{{ user | default('root') }}"
+  become: true
+  vars:
+    ansible_port: "{{ ssh_port | default('22') }}"
+
+  roles:
+    - install_python

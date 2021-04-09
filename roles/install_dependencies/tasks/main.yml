@@ -1,0 +1,58 @@
+---
+- name: "Install ffmpeg"
+  apt:
+    name: "ffmpeg"
+    state: latest
+
+- name: "Install imagemagick"
+  apt:
+    name: "imagemagick"
+    state: latest
+
+- name: "Install libass9"
+  apt:
+    name: "libass9"
+    state: latest
+
+- name: "Install gcc"
+  apt:
+    name: "gcc"
+    state: present
+
+- name: "Install cpp"
+  apt:
+    name: "cpp"
+    state: present
+
+- name: "Install cython"
+  pip:
+    name: "cython"
+    state: latest
+
+- name: "Install autoconf"
+  pip:
+    name: "autoconf"
+    state: latest
+
+- name: "Install automake"
+  apt:
+    name: "automake"
+    state: latest
+
+- name: "Install libavformat-dev"
+  apt:
+    name: "libavformat-dev"
+    state: latest
+
+- name: "Install libtool"
+  apt:
+    name: "libtool"
+    state: latest
+
+- import_role:
+    name: compile_zimg
+
+- name: "Install pkg-config"
+  apt:
+    name: "pkg-config"
+    state: latest

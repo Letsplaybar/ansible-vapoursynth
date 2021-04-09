@@ -1,0 +1,26 @@
+---
+- name: "Clone VapourSynth"
+  git:
+    repo: https://github.com/vapoursynth/vapoursynth.git
+    dest: "/opt/vapoursynth"
+    version: "R53-RC1"
+
+- name: "Autogeneration for VapourSynth"
+  shell: ./autogen.sh
+  args:
+    chdir: "/opt/vapoursynth"
+
+- name: "Configure VapourSynth"
+  shell: ./configure --enable-shared
+  args:
+    chdir: "/opt/vapoursynth"
+
+- name: "compile VapourSynth"
+  shell: make
+  args:
+    chdir: "/opt/vapoursynth"
+
+- name: "Install VapourSynth"
+  shell: make install
+  args:
+    chdir: "/opt/vapoursynth"
