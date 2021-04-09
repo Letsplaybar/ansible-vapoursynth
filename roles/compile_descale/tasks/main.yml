@@ -21,3 +21,8 @@
   with_items:
     - "meson build"
     - "ninja -C build"
+
+- name: "Install Descale"
+  shell: "meson install -C build/"
+  args:
+    chdir: "/opt/descale"
