@@ -1,0 +1,10 @@
+---
+- name: "Install matplotlib"
+  pip:
+    name: "matplotlib"
+    state: latest
+
+- name: "Install getnative"
+  pip:
+    name: "getnative"
+    state: latest

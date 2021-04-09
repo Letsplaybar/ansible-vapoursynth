@@ -1,0 +1,25 @@
+---
+- name: "Clone ffms2"
+  git:
+    repo: "https://github.com/FFMS/ffms2.git"
+    dest: "/opt/ffms2"
+
+- name: "Autogeneration for ffms2"
+  shell: ./autogen.sh
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "Configure ffms2"
+  shell: ./configure --enable-shared
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "compile ffms2"
+  shell: make
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "Install ffms2"
+  shell: make install
+  args:
+    chdir: "/opt/ffms2"
