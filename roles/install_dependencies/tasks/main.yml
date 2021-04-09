@@ -56,3 +56,8 @@
   apt:
     name: "libass-dev"
     state: latest
+
+- name: "Install imagemagick"
+  apt:
+    name: "imagemagick"
+    state: latest
