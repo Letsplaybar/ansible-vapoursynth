@@ -1,7 +1,19 @@
 # VapourSynth InstallScript
 This script allows you to easily install vapoursynth on Linux.
 
-____
+___
+# Requirements
+
+The following requirements must be met for the system on which the script is to be executed afterwards:
+- Python3
+- ansible (It is best to install the latest version via `pip`)
+
+---
+# Preparing
+drag the repo to a machine on which Ansible is installed ( doesn't have to be the same as the one on which you want to install VapourSynth)
+`git clone https://github.com/Letsplaybar/ansible-vapoursynth.git`
+
+___
 ## Configuration:
 add the servers you want to install vapoursynth to your inventory/hosts
 
@@ -26,6 +38,7 @@ ___
 ## Initialise
 In order for ansible to run error-free on the server, python must be installed on the server. to ensure this, 
 execute the following command: `ansible-playbook -i inventory/hosts init.yml`
+(This command does not need to be executed if the script is only to install Vapoursynth on the local machine.)
 
 ___
 ## Setup
