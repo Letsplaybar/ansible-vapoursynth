@@ -4,9 +4,6 @@
     name: "ffmpeg"
     state: latest
 
-- import_role:
-    name: compile_imagemagick
-
 - name: "Install libass-dev"
   apt:
     name: "libass-dev"
@@ -43,9 +40,17 @@
     state: latest
 
 - import_role:
+    name: compile_imagemagick
+
+- import_role:
     name: compile_zimg
 
 - name: "Install pkg-config"
   apt:
     name: "pkg-config"
+    state: latest
+
+- name: "Install libtesseract-dev"
+  apt:
+    name: "libtesseract-dev"
     state: latest
