@@ -11,7 +11,7 @@
     chdir: "/opt/vapoursynth"
 
 - name: "Configure VapourSynth"
-  shell: ./configure --enable-shared
+  shell: ./configure --enable-shared --enable-plugins
   args:
     chdir: "/opt/vapoursynth"
 
