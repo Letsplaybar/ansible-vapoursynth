@@ -4,14 +4,12 @@
     name: "ffmpeg"
     state: latest
 
-- name: "Install imagemagick"
-  apt:
-    name: "imagemagick"
-    state: latest
+- import_role:
+    name: compile_imagemagick
 
-- name: "Install libass9"
+- name: "Install libass-dev"
   apt:
-    name: "libass9"
+    name: "libass-dev"
     state: latest
 
 - name: "Install gcc"
@@ -50,14 +48,4 @@
 - name: "Install pkg-config"
   apt:
     name: "pkg-config"
-    state: latest
-
-- name: "Install libass-dev"
-  apt:
-    name: "libass-dev"
-    state: latest
-
-- name: "Install imagemagick"
-  apt:
-    name: "imagemagick"
     state: latest
