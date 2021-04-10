@@ -28,11 +28,14 @@ With the variable `user` you define the user via which ansible logs in.
 
 With the variable `ssh_port` you define the ssh port over which the server can be reached.
 
+With the variable `python_version` you define the python version that is installed on the host.
+
 Example:
 ````yaml
 #inventory/host_vars/domain.tld/vars.yml
-user= ansible # default is root
-ssh_port= 4489 # default is 22
+user: ansible # default is root
+ssh_port: 4489 # default is 22
+python_version: python3.8 #default is python3.8
 ````
 ___
 ## Initialise
@@ -42,7 +45,15 @@ execute the following command: `ansible-playbook -i inventory/hosts init.yml`
 
 ___
 ## Setup
-Now all you have to do is run the playbook with the following command: `ansible-playbook -i inventory/hosts setup.yml`
+Now all you have to do is run the playbook with the following command: `ansible-playbook -i inventory/hosts setup.yml --tags=vapoursynth`
+
+___
+## Install Plugins and Scripts
+the script can also install the plugins `descale` and `ffms2` and the script `getnative` with the command: 
+- `ansible-playbook -i inventory/hosts setup.yml --tags=getnative` (install descale, ffms2 and getnative)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2`
+- `ansible-playbook -i inventory/hosts setup.yml --tags=descale`
+- `ansible-playbook -i inventory/hosts setup.yml --tags=setup-all` (install the whole Script)
 
 ___
 ## Additional

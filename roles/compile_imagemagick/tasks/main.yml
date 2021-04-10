@@ -1,21 +1,5 @@
 ---
-- name: "Clone imagemagick"
-  git:
-    repo: "https://github.com/ImageMagick/ImageMagick.git"
-    dest: "/opt/imagemagick"
-    version: "7.0.11-6"
-
-- name: "Configure imagemagick"
-  shell: ./configure --enable-shared
-  args:
-    chdir: "/opt/imagemagick"
-
-- name: "compile imagemagick"
-  shell: make
-  args:
-    chdir: "/opt/imagemagick"
-
-- name: "Install imagemagick"
-  shell: make install
-  args:
-    chdir: "/opt/imagemagick"
+- import_tasks: "{{ role_path }}/tasks/setup.yml"
+  tags:
+    - setup-all
+    - vapoursynth

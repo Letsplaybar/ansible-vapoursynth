@@ -10,3 +10,6 @@
     - install_git
     - install_dependencies
     - compile_vapoursynth
+    - compile_ffms2
+    - compile_descale
+    - install_getnative

@@ -1,21 +1,5 @@
 ---
-- name: "Install matplotlib"
-  pip:
-    name: "matplotlib"
-    state: latest
-
-- name: "Clone getnative"
-  git:
-    repo: "https://github.com/Infiziert90/getnative.git"
-    dest: "/opt/getnative"
-    version: "2.2.1"
-
-- name: "Build getnative"
-  shell: "python3 setup.py build"
-  args:
-    chdir: "/opt/getnative"
-
-- name: "Install getnative"
-  shell: "python3 setup.py install"
-  args:
-    chdir: "/opt/getnative"
+- import_tasks: "{{ role_path }}/tasks/setup.yml"
+  tags:
+    - setup-all
+    - getnative

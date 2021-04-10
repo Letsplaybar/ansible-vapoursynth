@@ -1,26 +1,5 @@
 ---
-- name: "Clone zimg"
-  git:
-    repo: "https://github.com/sekrit-twc/zimg.git"
-    dest: "/opt/zlib"
-    version: "v3.0"
-
-- name: "Autogeneration for zimg"
-  shell: ./autogen.sh
-  args:
-    chdir: "/opt/zlib"
-
-- name: "Configure zimg"
-  shell: ./configure --enable-shared
-  args:
-    chdir: "/opt/zlib"
-
-- name: "compile zimg"
-  shell: make
-  args:
-    chdir: "/opt/zlib"
-
-- name: "Install zimg"
-  shell: make install
-  args:
-    chdir: "/opt/zlib"
+- import_tasks: "{{ role_path }}/tasks/setup.yml"
+  tags:
+    - setup-all
+    - vapoursynth

@@ -1,0 +1,29 @@
+---
+- name: "Install ninja-build"
+  apt:
+    name: "ninja-build"
+    state: latest
+
+- name: "Install meson"
+  pip:
+    name: "meson"
+    state: latest
+
+- name: "Clone Descale"
+  git:
+    repo: "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale.git"
+    dest: "/opt/descale"
+    version: "r6"
+
+- name: "Build Descale"
+  shell: "{{ item }}"
+  args:
+    chdir: "/opt/descale"
+  with_items:
+    - "meson build"
+    - "ninja -C build"
+
+- name: "Install Descale"
+  shell: "meson install -C build/"
+  args:
+    chdir: "/opt/descale"

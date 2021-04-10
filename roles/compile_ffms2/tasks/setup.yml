@@ -1,0 +1,50 @@
+---
+- name: "Install libavformat-dev"
+  apt:
+    name: "libavformat-dev"
+    state: latest
+
+- name: "Install libswscale-dev"
+  apt:
+    name: "libswscale-dev"
+    state: latest
+
+- name: "Install libavcodec-dev"
+  apt:
+    name: "libavcodec-dev"
+    state: latest
+
+- name: "Install libavutil-dev"
+  apt:
+    name: "libavutil-dev"
+    state: latest
+
+- name: "Install libswresample-dev"
+  apt:
+    name: "libswresample-dev"
+    state: latest
+
+- name: "Clone ffms2"
+  git:
+    repo: "https://github.com/FFMS/ffms2.git"
+    dest: "/opt/ffms2"
+
+- name: "Autogeneration for ffms2"
+  shell: ./autogen.sh
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "Configure ffms2"
+  shell: ./configure --enable-shared
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "compile ffms2"
+  shell: make
+  args:
+    chdir: "/opt/ffms2"
+
+- name: "Install ffms2"
+  shell: make install
+  args:
+    chdir: "/opt/ffms2"
