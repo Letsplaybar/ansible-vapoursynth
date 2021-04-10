@@ -4,7 +4,13 @@
     name: "matplotlib"
     state: latest
 
+- name: "Clone getnative"
+  git:
+    repo: "https://github.com/Infiziert90/getnative.git"
+    dest: "/opt/getnative"
+    version: "2.2.1"
+
 - name: "Install getnative"
-  pip:
-    name: "getnative"
-    state: latest
+  script: "setup.py"
+  args:
+    chdir: "/opt/getnative"

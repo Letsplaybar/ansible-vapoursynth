@@ -13,6 +13,7 @@
   git:
     repo: "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale.git"
     dest: "/opt/descale"
+    version: "r6"
 
 - name: "Build Descale"
   shell: "{{ item }}"
