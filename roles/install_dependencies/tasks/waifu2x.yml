@@ -8,42 +8,42 @@
   apt:
     name: "{{ item }}"
     state: latest
-    with_items:
-      - "beignet-opencl-icd"
-      - "opencl-headers"
-    when:
-      intel_enable
+  with_items:
+    - "beignet-opencl-icd"
+    - "opencl-headers"
+  when:
+    intel_enable
 
 - name: "Install mesa-opencl-icd opencl-headers ocl-icd-opencl-dev"
   apt:
     name: "{{ item }}"
     state: latest
-    with_items:
-      - "mesa-opencl-icd"
-      - "opencl-headers"
-      - "ocl-icd-opencl-dev"
-    when:
-      amd_enable
+  with_items:
+    - "mesa-opencl-icd"
+    - "opencl-headers"
+    - "ocl-icd-opencl-dev"
+  when:
+    amd_enable
 
 - name: "Install opencl-nvidia opencl-headers ocl-icd"
   apt:
     name: "{{ item }}"
     state: latest
-    with_items:
-      - "opencl-nvidia"
-      - "opencl-headers"
-      - "ocl-icd"
-    when:
-      nvidea_enable
+  with_items:
+    - "opencl-nvidia"
+    - "opencl-headers"
+    - "ocl-icd"
+  when:
+    nvidea_enable
 
 - name: "Install nvidia-cuda-toolkit"
   apt:
     name: "{{ item }}"
     state: latest
-    with_items:
-      - "nvidia-cuda-toolkit"
-    when:
-      cuda_enable
+  with_items:
+    - "nvidia-cuda-toolkit"
+  when:
+    cuda_enable
 
 - name: "Install OpenCV"
   apt:
