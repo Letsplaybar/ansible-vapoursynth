@@ -8,7 +8,7 @@
 
 - name: "Create build dir"
   file:
-    path: "/build/vulcan/build"
+    path: "/opt/vulcan/build"
     state: directory
 
 - name: "Build vulcan"

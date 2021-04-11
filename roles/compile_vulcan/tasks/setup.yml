@@ -8,7 +8,7 @@
 
 - name: "Create build dir"
   file:
-    path: "/build/vapour-vulcan/build"
+    path: "/opt/vapour-vulcan/build"
     state: directory
 
 - name: "Build VapourSynth-Vulcan"
