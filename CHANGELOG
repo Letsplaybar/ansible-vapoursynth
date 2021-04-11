@@ -1,0 +1,7 @@
+=====[From version 1 to 2]=====
+all vapoursynth plugins are compiled with it
+The plugins for ffms2 and descale can be compiled with the script
+the script getnative can be installed with
+Vapoursynth variables are now set automatically (LD_LIBRARY_PATH, PYTHONPATH)
+The version to be installed can be customised from the cloned projects.
+Tags are now used to determine what to install
