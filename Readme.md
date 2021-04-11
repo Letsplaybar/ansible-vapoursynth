@@ -55,6 +55,8 @@ ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
 waifu2x_version: v5.3.4 #default is v5.3.4
 vapour_waifu2x_version: r8 # default is r8
+opencv_version: 4.5.2 #default is 4.5.2
+opencv_contrib_version: 4.5.2 #default is 4.5.2
 ````
 ___
 ## Initialise
