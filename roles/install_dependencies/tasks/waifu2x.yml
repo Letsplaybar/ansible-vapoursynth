@@ -4,7 +4,7 @@
     name: "cmake"
     state: latest
 
-- name: "Install beignet-opencl-icd opencl-headers intel-opencl-icd"
+- name: "Install beignet-opencl-icd opencl-headers intel-opencl-icd ocl-icd-opencl-dev"
   apt:
     name: "{{ item }}"
     state: latest
@@ -12,6 +12,7 @@
     - "beignet-opencl-icd"
     - "opencl-headers"
     - "intel-opencl-icd"
+    - "ocl-icd-opencl-dev"
   when:
     intel_enable
 
@@ -33,7 +34,7 @@
   with_items:
     - "opencl-nvidia"
     - "opencl-headers"
-    - "ocl-icd"
+    - "ocl-icd-dev"
   when:
     nvidea_enable
 
