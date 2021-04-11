@@ -1,0 +1,10 @@
+---
+- import_tasks: "{{ role_path }}/tasks/dependencies.yml"
+  tags:
+    - setup-all
+    - vulcan
+
+- import_tasks: "{{ role_path }}/tasks/setup.yml"
+  tags:
+    - setup-all
+    - vulcan
