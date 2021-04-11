@@ -6,7 +6,7 @@
 
 - name: "Install beignet-opencl-icd opencl-headers"
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
     with_items:
       - "beignet-opencl-icd"
@@ -16,7 +16,7 @@
 
 - name: "Install mesa-opencl-icd opencl-headers ocl-icd-opencl-dev"
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
     with_items:
       - "mesa-opencl-icd"
@@ -27,7 +27,7 @@
 
 - name: "Install opencl-nvidia opencl-headers ocl-icd"
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
     with_items:
       - "opencl-nvidia"
@@ -38,7 +38,7 @@
 
 - name: "Install nvidia-cuda-toolkit"
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
     with_items:
       - "nvidia-cuda-toolkit"
