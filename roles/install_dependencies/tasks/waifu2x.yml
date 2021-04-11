@@ -122,4 +122,5 @@
     name: "libdc1394-22-dev"
     state: latest
 
-- import_role: compile_opencv
+- import_role:
+   name: compile_opencv

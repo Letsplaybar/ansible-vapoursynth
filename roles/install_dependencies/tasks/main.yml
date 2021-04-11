@@ -15,3 +15,8 @@
     - ffms2
     - getnative
     - waifu2x
+
+- import_tasks: "{{ role_path }}/tasks/getnative.yml"
+  tags:
+    - setup-all
+    - getnative
