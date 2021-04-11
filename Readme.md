@@ -22,7 +22,7 @@ Example:
 domain.tld ansible_host=127.0.0.1
 ```
 
-create a directory with the hostname (domain.tld) and create a vars.yml in the directory
+Create a directory with the host name (domain.tld) in `inventory/host_vars/` and create a vars.yml in this directory
 
 With the variable `user` you define the user via which ansible logs in. 
 
