@@ -10,8 +10,6 @@
   file:
     path: "/build/vulcan/build"
     state: directory
-  args:
-    chdir: "/opt/vulcan"
 
 - name: "Build vulcan"
   shell: "{{item}}"

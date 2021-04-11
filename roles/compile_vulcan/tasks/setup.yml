@@ -10,8 +10,6 @@
   file:
     path: "/build/vapour-vulcan/build"
     state: directory
-  args:
-    chdir: "/opt/vapour-vulcan"
 
 - name: "Build VapourSynth-Vulcan"
   shell: "{{item}}"
