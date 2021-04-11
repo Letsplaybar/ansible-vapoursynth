@@ -1,0 +1,10 @@
+---
+- name: "Install libvulkan-dev"
+  apt:
+    name: "libvulkan-dev"
+    state: latest
+
+- name: "Install glslang-dev"
+  apt:
+    name: "glslang-dev"
+    state: latest

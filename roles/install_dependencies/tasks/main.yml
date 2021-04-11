@@ -6,7 +6,7 @@
 
 - import_tasks: "{{ role_path }}/tasks/waifu2x.yml"
   tags:
-    - setup-all
+#    - setup-all
     - waifu2x
 
 - import_tasks: "{{ role_path }}/tasks/ffms2.yml"
@@ -20,3 +20,8 @@
   tags:
     - setup-all
     - getnative
+
+- import_tasks: "{{ role_path }}/tasks/vulcan.yml"
+  tags:
+    - setup-all
+    - vulcan

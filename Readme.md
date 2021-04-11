@@ -57,6 +57,8 @@ waifu2x_version: v5.3.4 #default is v5.3.4
 vapour_waifu2x_version: r8 # default is r8
 opencv_version: 4.5.2 #default is 4.5.2
 opencv_contrib_version: 4.5.2 #default is 4.5.2
+vulcan_version: 20210210 #default is 20210210
+vapour_vulcan_version: r3 #default is r3
 ````
 ___
 ## Initialise
