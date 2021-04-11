@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc.git"
     dest: "/opt/vapour-waifu2x"
-    version: "{{ vapour-waifu2x_version | default('r8') }}"
+    version: "{{ vapour_waifu2x_version | default('r8') }}"
 
 - name: "Build Vapoursynth-Waifu2x"
   shell: "{{ item }}"
