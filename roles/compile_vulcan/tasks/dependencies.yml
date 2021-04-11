@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/nihui/waifu2x-ncnn-vulkan.git"
     dest: "/opt/vulcan"
-    version: {{vulcan_version}}
+    version: "{{vulcan_version}}"
     recursive: true
 
 - name: "Create build dir"
