@@ -1,10 +1,4 @@
 ---
-- import_tasks: "{{ role_path }}/tasks/dependencies.yml"
-  tags:
-    - setup-all
-    - ffms2
-    - getnative
-
 - import_tasks: "{{ role_path }}/tasks/setup.yml"
   tags:
     - setup-all

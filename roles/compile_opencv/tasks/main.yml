@@ -1,0 +1,6 @@
+---
+- import_tasks: "{{ role_path }}/tasks/opencv.yml"
+  tags:
+    - setup-all
+    - waifu2x
+

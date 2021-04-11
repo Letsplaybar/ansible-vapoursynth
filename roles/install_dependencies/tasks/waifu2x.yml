@@ -47,7 +47,79 @@
   when:
     cuda_enable
 
-- name: "Install OpenCV"
+- name: "Install build-essential"
   apt:
-    name: "python3-opencv"
+    name: "build-essential"
     state: latest
+
+- name: "Install libgtk-3-dev"
+  apt:
+    name: "libgtk-3-dev"
+    state: latest
+
+- name: "Install libv4l-dev"
+  apt:
+    name: "libv4l-dev"
+    state: latest
+
+- name: "Install libxvidcore-dev"
+  apt:
+    name: "libxvidcore-dev"
+    state: latest
+
+- name: "Install libx264-dev"
+  apt:
+    name: "libx264-dev"
+    state: latest
+
+- name: "Install libjpeg-dev"
+  apt:
+    name: "libjpeg-dev"
+    state: latest
+
+- name: "Install libpng-dev"
+  apt:
+    name: "libpng-dev"
+    state: latest
+
+- name: "Install libtiff-dev"
+  apt:
+    name: "libtiff-dev"
+    state: latest
+
+- name: "Install gfortran"
+  apt:
+    name: "gfortran"
+    state: latest
+
+- name: "Install openexr"
+  apt:
+    name: "openexr"
+    state: latest
+
+- name: "Install libatlas-base-dev"
+  apt:
+    name: "libatlas-base-dev"
+    state: latest
+
+- name: "Install numpy"
+  pip:
+    name: "numpy"
+    state: latest
+
+- name: "Install libtbb2"
+  apt:
+    name: "libtbb2"
+    state: latest
+
+- name: "Install libtbb-dev"
+  apt:
+    name: "libtbb-dev"
+    state: latest
+
+- name: "Install libdc1394-22-dev"
+  apt:
+    name: "libdc1394-22-dev"
+    state: latest
+
+- import_role: compile_opencv

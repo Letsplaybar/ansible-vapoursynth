@@ -8,3 +8,10 @@
   tags:
     - setup-all
     - waifu2x
+
+- import_tasks: "{{ role_path }}/tasks/ffms2.yml"
+  tags:
+    - setup-all
+    - ffms2
+    - getnative
+    - waifu2x
