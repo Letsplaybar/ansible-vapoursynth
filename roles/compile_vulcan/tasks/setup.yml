@@ -14,7 +14,7 @@
 - name: "Build VapourSynth-Vulcan"
   shell: "{{item}}"
   with_items:
-    - "cmake .."
+    - "cmake .. -DVAPOURSYNTH_HEADER_DIR /usr/local/include/vapoursynth/"
     - "cmake --build . -j 4"
   args:
     chdir: "/opt/vapour-vulcan/build"
