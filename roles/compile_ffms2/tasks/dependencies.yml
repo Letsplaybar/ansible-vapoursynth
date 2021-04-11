@@ -1,0 +1,25 @@
+---
+- name: "Install libavformat-dev"
+  apt:
+    name: "libavformat-dev"
+    state: latest
+
+- name: "Install libswscale-dev"
+  apt:
+    name: "libswscale-dev"
+    state: latest
+
+- name: "Install libavcodec-dev"
+  apt:
+    name: "libavcodec-dev"
+    state: latest
+
+- name: "Install libavutil-dev"
+  apt:
+    name: "libavutil-dev"
+    state: latest
+
+- name: "Install libswresample-dev"
+  apt:
+    name: "libswresample-dev"
+    state: latest

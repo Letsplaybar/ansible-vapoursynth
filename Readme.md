@@ -33,9 +33,20 @@ With the variable `python_version` you define the python version that is install
 Example:
 ````yaml
 #inventory/host_vars/domain.tld/vars.yml
-user: ansible # default is root
+
+##System Vars
+user: ansible # default is root (user require sudo)
 ssh_port: 4489 # default is 22
 python_version: python3.8 #default is python3.8
+
+##Version Vars
+##with these variables you determine which version is to be cloned for the install/compile
+getnative_version: 2.2.1 #default is 2.2.1
+zimg_version: v3.0 #default is v3.0
+vapoursynth_version: R53-RC1 #default is R53-RC1
+imagemagick_version: 7.0.11-6 #default is 7.0.11-6
+ffms2_version: 2.40-RC1 #default is 2.40-RC1
+descale_version: r6 #default is r6
 ````
 ___
 ## Initialise

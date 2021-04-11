@@ -1,0 +1,5 @@
+---
+- name: "Install matplotlib"
+  pip:
+    name: "matplotlib"
+    state: latest

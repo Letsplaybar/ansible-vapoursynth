@@ -1,0 +1,10 @@
+---
+- name: "Install ninja-build"
+  apt:
+    name: "ninja-build"
+    state: latest
+
+- name: "Install meson"
+  pip:
+    name: "meson"
+    state: latest
