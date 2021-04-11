@@ -22,3 +22,8 @@
   shell: "make install"
   args:
     chdir: "/opt/waifu2x/out"
+
+- name: "Run ldconfig"
+  shell: "ldconfig"
+  args:
+    chdir: "/opt/waifu2x/out"
