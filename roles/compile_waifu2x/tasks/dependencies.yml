@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/DeadSix27/waifu2x-converter-cpp.git"
     dest: "/opt/waifu2x"
-    version: "{{ waifu2x_version | default('v5.3.4') }}"
+    version: "{{ waifu2x_version }}"
 
 - name: "Create out dir"
   file:

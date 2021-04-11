@@ -3,13 +3,13 @@
   git:
     repo: "https://github.com/opencv/opencv.git"
     dest: "/opt/opencv"
-    version: "{{ opencv_version | default('4.5.2')}}"
+    version: "{{ opencv_version }}"
 
 - name: "Clone opencv-contrib"
   git:
     repo: "https://github.com/opencv/opencv_contrib.git"
     dest: "/opt/opencv-contrib"
-    version: "{{ opencv_contrib_version | default('4.5.2')}}"
+    version: "{{ opencv_contrib_version }}"
 
 - name: "Create build dir"
   file:

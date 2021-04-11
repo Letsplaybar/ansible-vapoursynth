@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/FFMS/ffms2.git"
     dest: "/opt/ffms2"
-    version: "{{ ffms2_version | default('2.40-RC1')}}"
+    version: "{{ ffms2_version }}"
 
 - name: "Autogeneration for ffms2"
   shell: ./autogen.sh

@@ -3,7 +3,7 @@
   git:
     repo: https://github.com/vapoursynth/vapoursynth.git
     dest: "/opt/vapoursynth"
-    version: "{{ vapoursynth_version | default('R53-RC1') }}"
+    version: "{{ vapoursynth_version }}"
 
 - name: "Autogeneration for VapourSynth"
   shell: ./autogen.sh

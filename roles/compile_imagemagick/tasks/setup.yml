@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/ImageMagick/ImageMagick.git"
     dest: "/opt/imagemagick"
-    version: "{{imagemagick_version | default('7.0.11-6')}}"
+    version: "{{imagemagick_version}}"
 
 - name: "Configure imagemagick"
   shell: ./configure --enable-shared

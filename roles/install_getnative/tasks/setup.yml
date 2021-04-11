@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/Infiziert90/getnative.git"
     dest: "/opt/getnative"
-    version: "{{ getnative_version | default('2.2.1') }}"
+    version: "{{ getnative_version }}"
 
 - name: "Build getnative"
   shell: "python3 setup.py build"

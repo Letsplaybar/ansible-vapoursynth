@@ -3,7 +3,7 @@
   git:
     repo: "https://github.com/sekrit-twc/zimg.git"
     dest: "/opt/zlib"
-    version: "{{ zimg_version | default('v3.0') }}"
+    version: "{{ zimg_version }}"
 
 - name: "Autogeneration for zimg"
   shell: ./autogen.sh

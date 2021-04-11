@@ -1,0 +1,4 @@
+#default vapoursynth-waifu2x Version
+vapour_waifu2x_version: r8
+#default waifu2x Version
+waifu2x_version: v5.3.4
