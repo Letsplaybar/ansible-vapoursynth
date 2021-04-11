@@ -9,7 +9,9 @@
     - install_pip
     - install_git
     - install_dependencies
+    - install_meson
     - compile_vapoursynth
     - compile_ffms2
     - compile_descale
+    - compile_waifu2x
     - install_getnative

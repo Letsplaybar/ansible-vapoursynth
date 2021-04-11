@@ -1,6 +1,6 @@
----
 - import_tasks: "{{ role_path }}/tasks/setup.yml"
   tags:
     - setup-all
     - descale
     - getnative
+    - waifu2x

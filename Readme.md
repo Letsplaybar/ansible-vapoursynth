@@ -47,6 +47,7 @@ vapoursynth_version: R53-RC1 #default is R53-RC1
 imagemagick_version: 7.0.11-6 #default is 7.0.11-6
 ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
+waifu2x_version: r8 # default is r8
 ````
 ___
 ## Initialise
@@ -60,10 +61,11 @@ Now all you have to do is run the playbook with the following command: `ansible-
 
 ___
 ## Install Plugins and Scripts
-the script can also install the plugins `descale` and `ffms2` and the script `getnative` with the command: 
+the script can also install the plugins `descale`, `waifu2x` and `ffms2` and the script `getnative` with the command: 
 - `ansible-playbook -i inventory/hosts setup.yml --tags=getnative` (install descale, ffms2 and getnative)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2`
 - `ansible-playbook -i inventory/hosts setup.yml --tags=descale`
+- `ansible-playbook -i inventory/hosts setup.yml --tags=waifu2x`
 - `ansible-playbook -i inventory/hosts setup.yml --tags=setup-all` (install the whole Script)
 
 ___

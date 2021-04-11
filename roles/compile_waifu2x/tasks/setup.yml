@@ -1,0 +1,19 @@
+---
+- name: "Clone Waifu2x"
+  git:
+    repo: "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc.git"
+    dest: "/opt/waifu2x"
+    version: "{{ waifu2x_version | default('r8') }}"
+
+- name: "Build Waifu2x"
+  shell: "{{ item }}"
+  args:
+    chdir: "/opt/waifu2x"
+  with_items:
+    - "meson build"
+    - "ninja -C build"
+
+- name: "Install Waifu2x"
+  shell: "meson install -C build/"
+  args:
+    chdir: "/opt/waifu2x"
