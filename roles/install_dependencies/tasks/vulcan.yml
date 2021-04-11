@@ -8,3 +8,8 @@
   apt:
     name: "glslang-dev"
     state: latest
+
+- name: "Install cmake"
+  apt:
+    name: "cmake"
+    state: latest
