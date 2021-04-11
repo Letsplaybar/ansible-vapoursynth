@@ -1,7 +1,11 @@
 ---
-- import_tasks:
-  - "{{ role_path }}/tasks/dependencies.yml"
-  - "{{ role_path }}/tasks/setup.yml"
+- import_tasks: "{{ role_path }}/tasks/dependencies.yml"
+  tags:
+    - setup-all
+    - descale
+    - getnative
+
+- import_tasks: "{{ role_path }}/tasks/setup.yml"
   tags:
     - setup-all
     - descale
