@@ -39,6 +39,12 @@ user: ansible # default is root (user require sudo)
 ssh_port: 4489 # default is 22
 python_version: python3.8 #default is python3.8
 
+##Switch on graphics card producer
+intel_enable: true #default ist false
+amd_enable: true #default ist false
+nvidea_enable: true #default ist false
+cuda_enable: true #default ist false
+
 ##Version Vars
 ##with these variables you determine which version is to be cloned for the install/compile
 getnative_version: 2.2.1 #default is 2.2.1
@@ -47,7 +53,8 @@ vapoursynth_version: R53-RC1 #default is R53-RC1
 imagemagick_version: 7.0.11-6 #default is 7.0.11-6
 ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
-waifu2x_version: r8 # default is r8
+waifu2x_version: v5.3.4 #default is v5.3.4
+vapour-waifu2x_version: r8 # default is r8
 ````
 ___
 ## Initialise
