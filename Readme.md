@@ -81,14 +81,14 @@ Depending on your operating system’s configuration, VapourSynth may not work o
 - “vspipe: error while loading shared libraries: libvapoursynth-script.so.0: cannot open shared object file: No such file or directory”
 
   This is caused by the non-standard location of libvapoursynth-script.so.0. Your dynamic loader is not configured to look in /usr/local/lib. One way to work around this error is to use the LD_LIBRARY_PATH environment variable:
-  ``` sh
+  ```sh
   $ LD_LIBRARY_PATH=/usr/local/lib vspipe --version
   ```
 
 -  “Failed to initialize VapourSynth environment”
 
   This is caused by the non-standard location of the Python module, vapoursynth.so. Your Python is not configured to look in /usr/local/lib/python3.x/site-packages. One way to work around this error is to use the PYTHONPATH environment variable:
-  ``` sh
+  ```sh
   $ PYTHONPATH=/usr/local/lib/python3.x/site-packages vspipe --version
   ```
   Replace “x” with the correct number.
