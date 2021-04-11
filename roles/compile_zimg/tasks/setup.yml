@@ -16,7 +16,7 @@
     chdir: "/opt/zlib"
 
 - name: "compile zimg"
-  shell: make
+  shell: make -j4
   args:
     chdir: "/opt/zlib"
 

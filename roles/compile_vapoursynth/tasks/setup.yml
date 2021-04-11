@@ -16,7 +16,7 @@
     chdir: "/opt/vapoursynth"
 
 - name: "compile VapourSynth"
-  shell: make
+  shell: make -j4
   args:
     chdir: "/opt/vapoursynth"
 

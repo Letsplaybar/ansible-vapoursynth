@@ -16,7 +16,7 @@
     chdir: "/opt/ffms2"
 
 - name: "compile ffms2"
-  shell: make
+  shell: make -j4
   args:
     chdir: "/opt/ffms2"
 
