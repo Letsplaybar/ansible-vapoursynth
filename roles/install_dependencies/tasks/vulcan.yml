@@ -9,6 +9,11 @@
     name: "glslang-dev"
     state: latest
 
+- name: "Install glslang-tools"
+  apt:
+    name: "glslang-tools"
+    state: latest
+
 - name: "Install cmake"
   apt:
     name: "cmake"
