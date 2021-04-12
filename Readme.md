@@ -62,7 +62,7 @@ Now all you have to do is run the playbook with the following command: `ansible-
 
 ___
 ## Install Plugins and Scripts
-the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan`, `waifu2x` and `ffms2` and the script `getnative` with the command: 
+the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan` and `ffms2` and the script `getnative` with the command: 
 - `ansible-playbook -i inventory/hosts setup.yml --tags=getnative` (install descale, ffms2 and getnative)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2`
 - `ansible-playbook -i inventory/hosts setup.yml --tags=descale`
