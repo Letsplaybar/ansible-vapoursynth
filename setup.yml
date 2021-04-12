@@ -13,6 +13,5 @@
     - compile_vapoursynth
     - compile_ffms2
     - compile_descale
-#    - compile_waifu2x
     - compile_vulcan
     - install_getnative

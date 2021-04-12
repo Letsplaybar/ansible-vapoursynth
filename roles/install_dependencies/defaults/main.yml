@@ -1,4 +1,0 @@
-intel_enable: false
-amd_enable: false
-nvidea_enable: false
-cuda_enable: false
