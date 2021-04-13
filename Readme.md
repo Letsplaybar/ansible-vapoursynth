@@ -47,7 +47,7 @@ vapoursynth_version: R53-RC1 #default is R53-RC1
 imagemagick_version: 7.0.11-6 #default is 7.0.11-6
 ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
-vulcan_version: 20210210 #default is 20210210
+vulcan_version: "20210210" #default is "20210210"
 vapour_vulcan_version: r3 #default is r3
 
 ##enable CUDA Suport for Scripts
