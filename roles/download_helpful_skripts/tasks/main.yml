@@ -3,6 +3,12 @@
   file:
     path: "/opt/vapour-scripts/"
     state: directory
+  tags:
+    - setup-all
+    - muvsfunc_numpy
+    - edi_rpow2
+    - bmtoolkit
+    - alpha_cupy
 
 - import_tasks: "{{ role_path }}/tasks/muvsfunc_numpy.yml"
   tags:
