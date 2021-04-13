@@ -1,0 +1,5 @@
+---
+- name: "Download muvsfunc_numpy Skript"
+  get_url:
+    url: "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/master/Collections/muvsfunc_numpy.py"
+    dest: "/opt/vapour-skripts/muvsfunc_numpy.py"

@@ -49,6 +49,9 @@ ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
 vulcan_version: 20210210 #default is 20210210
 vapour_vulcan_version: r3 #default is r3
+
+##enable CUDA Suport for Scripts
+cuda_enable: true #default is false
 ````
 ___
 ## Initialise
@@ -62,17 +65,30 @@ Now all you have to do is run the playbook with the following command: `ansible-
 
 ___
 ## Install Plugins and Scripts
-the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan` and `ffms2` and the script `getnative` with the command: 
+the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan` and `ffms2` and the script `getnative`, `muvsfunc_numpy`, `edi_rpow2`, `BMToolkit` and `Alpha_CuPy` with the command: 
 - `ansible-playbook -i inventory/hosts setup.yml --tags=getnative` (install descale, ffms2 and getnative)
-- `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2`
-- `ansible-playbook -i inventory/hosts setup.yml --tags=descale`
-- `ansible-playbook -i inventory/hosts setup.yml --tags=vulkan`
+- `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2` (install ffms2)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=descale` (install descale)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=vulkan` (install waifu2x-ncnn-vulkan)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=muvsfunc_numpy` (install muvsfunc_numpy)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=edi_rpow2` (install edi_rpow2)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=bmtoolkit` (install BMToolkit)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=alpha_cupy` (install Alpha_CuPy)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=setup-all` (install the whole Script)
 
 ___
 ## Additional
 ### You use a password to log in via ssh?
 This is no problem just add the `--ask-pass` parameter to the command
+
+### How to insert the scripts (`muvsfunc_numpy`, `edi_rpow2`, `BMToolkit` and `Alpha_CuPy`) into your Vapoursynth script!
+```python
+sys.path.append('/opt/vapour-skripts')
+import muvsfunc_numpy as mufnp
+import Alpha_CuPy as ape
+import BMToolkit as bm
+import edi_rpow2 as edi
+```
 
 ### You see the following error?
 - Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this.  Please add this host's fingerprint to your known_hosts file to manage this host.

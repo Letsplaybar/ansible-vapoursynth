@@ -1,0 +1,5 @@
+---
+- name: "Download edi_rpow2 Skript"
+  get_url:
+    url: "https://gist.githubusercontent.com/YamashitaRen/020c497524e794779d9c/raw/2a20385e50804f8b24f2a2479e2c0f3c335d4853/edi_rpow2.py"
+    dest: "/opt/vapour-skripts/edi_rpow2.py"

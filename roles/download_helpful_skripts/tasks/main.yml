@@ -1,0 +1,24 @@
+---
+- import_tasks: "{{ role_path }}/tasks/muvsfunc_numpy.yml"
+  tags:
+    - setup-all
+    - muvsfunc_numpy
+
+- import_tasks: "{{ role_path }}/tasks/edi_rpow2.yml"
+  tags:
+    - setup-all
+    - edi_rpow2
+
+- import_tasks: "{{ role_path }}/tasks/BMToolkit.yml"
+  tags:
+    - setup-all
+    - bmtoolkit
+
+- import_tasks: "{{ role_path }}/tasks/Alpha_CuPy.yml"
+  tags:
+    - setup-all
+  when: "{{cuda_enable}}"
+
+- import_tasks: "{{ role_path }}/tasks/Alpha_CuPy.yml"
+  tags:
+    - alpha_cupy
