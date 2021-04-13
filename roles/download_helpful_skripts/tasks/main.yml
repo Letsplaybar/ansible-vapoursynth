@@ -1,4 +1,9 @@
 ---
+- name: "Create skript dir"
+  file:
+    path: "//opt/vapour-scripts/"
+    state: directory
+
 - import_tasks: "{{ role_path }}/tasks/muvsfunc_numpy.yml"
   tags:
     - setup-all

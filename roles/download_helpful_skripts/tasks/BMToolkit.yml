@@ -2,4 +2,4 @@
 - name: "Download BMToolkit Skript"
   get_url:
     url: "https://raw.githubusercontent.com/IFeelBloated/BlockMatchingToolkit/master/BMToolkit.py"
-    dest: "/opt/vapour-skripts/BMToolkit.py"
+    dest: "/opt/vapour-scripts/BMToolkit.py"

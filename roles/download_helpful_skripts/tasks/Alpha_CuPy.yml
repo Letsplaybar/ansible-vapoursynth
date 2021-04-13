@@ -2,14 +2,14 @@
 - name: "Download Alpha_CuPy Skript"
   get_url:
     url: "https://raw.githubusercontent.com/AlphaAtlas/VapourSynth-Super-Resolution-Helper/master/Scripts/Alpha_CuPy.py"
-    dest: "/opt/vapour-skripts/Alpha_CuPy.py"
+    dest: "/opt/vapour-scripts/Alpha_CuPy.py"
 
 - name: "Download dpid.cu Skript"
   get_url:
     url: "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/master/Collections/examples/Dpid_cupy/dpid.cu"
-    dest: "/opt/vapour-skripts/dpid.cu"
+    dest: "/opt/vapour-scripts/dpid.cu"
 
 - name: "Download bilateral.cu Skript"
   get_url:
     url: "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/master/Collections/examples/BilateralGPU_cupy/bilateral.cu"
-    dest: "/opt/vapour-skripts/bilateral.cu"
+    dest: "/opt/vapour-scripts/bilateral.cu"

@@ -83,7 +83,7 @@ This is no problem just add the `--ask-pass` parameter to the command
 
 ### How to insert the scripts (`muvsfunc_numpy`, `edi_rpow2`, `BMToolkit` and `Alpha_CuPy`) into your Vapoursynth script!
 ```python
-sys.path.append('/opt/vapour-skripts')
+sys.path.append('/opt/vapour-scripts')
 import muvsfunc_numpy as mufnp
 import Alpha_CuPy as ape
 import BMToolkit as bm
