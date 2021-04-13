@@ -52,6 +52,9 @@ vapour_vulcan_version: r3 #default is r3
 
 ##enable CUDA Suport for Scripts
 cuda_enable: true #default is false
+
+##number of tasks to compile
+tasks: 8 # default is 4
 ````
 ___
 ## Initialise

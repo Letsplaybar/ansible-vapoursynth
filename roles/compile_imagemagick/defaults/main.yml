@@ -1,2 +1,3 @@
 #default imagemagick version
 imagemagick_version: 7.0.11-6
+tasks: 4
