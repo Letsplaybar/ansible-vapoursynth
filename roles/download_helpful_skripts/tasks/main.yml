@@ -28,7 +28,7 @@
 - import_tasks: "{{ role_path }}/tasks/Alpha_CuPy.yml"
   tags:
     - setup-all
-  when: "{{cuda_enable}}"
+  when: cuda_enable
 
 - import_tasks: "{{ role_path }}/tasks/Alpha_CuPy.yml"
   tags:
