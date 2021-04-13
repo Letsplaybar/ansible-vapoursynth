@@ -11,7 +11,7 @@
     chdir: "/opt/imagemagick"
 
 - name: "compile imagemagick"
-  shell: "make -j{{tasks}}"
+  shell: "make -j{{compile_tasks}}"
   args:
     chdir: "/opt/imagemagick"
 

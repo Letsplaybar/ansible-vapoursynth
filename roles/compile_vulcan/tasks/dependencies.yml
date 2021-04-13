@@ -15,6 +15,6 @@
   shell: "{{item}}"
   with_items:
     - "cmake ../src"
-    - "cmake --build . -j {{tasks}}"
+    - "cmake --build . -j {{compile_tasks}}"
   args:
     chdir: "/opt/vulcan/build"
