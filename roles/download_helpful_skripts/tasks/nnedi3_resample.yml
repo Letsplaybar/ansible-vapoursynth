@@ -1,0 +1,5 @@
+---
+- name: "Download nnedi3_resample Skript"
+  get_url:
+    url: "https://raw.githubusercontent.com/mawen1250/VapourSynth-script/master/nnedi3_resample.py"
+    dest: "/opt/vapour-scripts/nnedi3_resample.py"

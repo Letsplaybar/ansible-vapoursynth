@@ -49,8 +49,9 @@ ffms2_version: 2.40-RC1 #default is 2.40-RC1
 descale_version: r6 #default is r6
 vulcan_version: "20210210" #default is "20210210"
 vapour_vulcan_version: r3 #default is r3
+lvsfunc_version: v0.1.0 #default is v0.1.0
 
-##enable CUDA Suport for Scripts
+##enable CUDA Support for Scripts
 cuda_enable: true #default is false
 
 ##number of tasks to compile
@@ -68,15 +69,20 @@ Now all you have to do is run the playbook with the following command: `ansible-
 
 ___
 ## Install Plugins and Scripts
-the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan` and `ffms2` and the script `getnative`, `muvsfunc_numpy`, `edi_rpow2`, `BMToolkit` and `Alpha_CuPy` with the command: 
+the script can also install the plugins `descale`, `waifu2x-ncnn-vulkan`, `lvsfunc` and `ffms2` and the script `getnative`, `muvsfunc_numpy`, `edi_rpow2`, `BMToolkit`, `mvsfunc`, `nnedi3_resample`, `havsfunc`, `adjust`  and `Alpha_CuPy` with the command: 
 - `ansible-playbook -i inventory/hosts setup.yml --tags=getnative` (install descale, ffms2 and getnative)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=ffms2` (install ffms2)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=descale` (install descale)
-- `ansible-playbook -i inventory/hosts setup.yml --tags=vulkan` (install waifu2x-ncnn-vulkan)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=muvsfunc_numpy` (install muvsfunc_numpy)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=edi_rpow2` (install edi_rpow2)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=bmtoolkit` (install BMToolkit)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=alpha_cupy` (install Alpha_CuPy)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=vulkan` (install waifu2x-ncnn-vulkan)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=mvsfunc` (install mvsfunc)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=nnedi3_resample` (install nnedi3_resample)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=havsfunc` (install havsfunc)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=adjust` (install adjust)
+- `ansible-playbook -i inventory/hosts setup.yml --tags=lvsfunc` (install lvsfunc)
 - `ansible-playbook -i inventory/hosts setup.yml --tags=setup-all` (install the whole Script)
 
 ___
@@ -91,6 +97,10 @@ import muvsfunc_numpy as mufnp
 import Alpha_CuPy as ape
 import BMToolkit as bm
 import edi_rpow2 as edi
+import mvsfunc as mvf
+import havsfunc as haf
+import adjust
+import nnedi3_resample as nnrs
 ```
 
 ### You see the following error?

@@ -1,0 +1,5 @@
+---
+- name: "Download adjust Skript"
+  get_url:
+    url: "https://raw.githubusercontent.com/dubhater/vapoursynth-adjust/master/adjust.py"
+    dest: "/opt/vapour-scripts/adjust.py"

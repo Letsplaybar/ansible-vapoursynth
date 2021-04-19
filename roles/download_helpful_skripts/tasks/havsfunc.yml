@@ -1,0 +1,5 @@
+---
+- name: "Download havsfunc Skript"
+  get_url:
+    url: "https://raw.githubusercontent.com/HomeOfVapourSynthEvolution/havsfunc/master/havsfunc.py"
+    dest: "/opt/vapour-scripts/havsfunc.py"

@@ -9,6 +9,7 @@
     - edi_rpow2
     - bmtoolkit
     - alpha_cupy
+    - mvsfunc
 
 - import_tasks: "{{ role_path }}/tasks/muvsfunc_numpy.yml"
   tags:
@@ -33,3 +34,27 @@
 - import_tasks: "{{ role_path }}/tasks/Alpha_CuPy.yml"
   tags:
     - alpha_cupy
+
+- import_tasks: "{{ role_path }}/tasks/mvsfunc.yml"
+  tags:
+    - setup-all
+    - mvsfunc
+    - nnedi3_resample
+    - havsfunc
+
+- import_tasks: "{{ role_path }}/tasks/nnedi3_resample.yml"
+  tags:
+    - setup-all
+    - nnedi3_resample
+    - havsfunc
+
+- import_tasks: "{{ role_path }}/tasks/adjust.yml"
+  tags:
+    - setup-all
+    - adjust
+    - havsfunc
+
+- import_tasks: "{{ role_path }}/tasks/havsfunc.yml"
+  tags:
+    - setup-all
+    - havsfunc

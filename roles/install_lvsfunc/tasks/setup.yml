@@ -1,0 +1,16 @@
+---
+- name: "Clone lvsfunc"
+  git:
+    repo: "https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git"
+    dest: "/opt/lvsfunc"
+    version: "{{ lvsfunc_version }}"
+
+- name: "Build lvsfunc"
+  shell: "python3 setup.py build"
+  args:
+    chdir: "/opt/lvsfunc"
+
+- name: "Install lvsfunc"
+  shell: "python3 setup.py install"
+  args:
+    chdir: "/opt/lvsfunc"
