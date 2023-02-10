@@ -41,15 +41,15 @@ python_version: python3.8 #default is python3.8
 
 ##Version Vars
 ##with these variables you determine which version is to be cloned for the install/compile
-getnative_version: 2.2.1 #default is 2.2.1
+getnative_version: 3.2.1 #default is 2.2.1
 zimg_version: v3.0 #default is v3.0
-vapoursynth_version: R53-RC1 #default is R53-RC1
-imagemagick_version: 7.0.11-6 #default is 7.0.11-6
-ffms2_version: 2.40-RC1 #default is 2.40-RC1
-descale_version: r6 #default is r6
-vulcan_version: "20210210" #default is "20210210"
-vapour_vulcan_version: r3 #default is r3
-lvsfunc_version: v0.1.0 #default is v0.1.0
+vapoursynth_version: R61 #default is R53-RC1
+imagemagick_version: 7.1.0-61 #default is 7.0.11-6
+ffms2_version: master #default is master
+descale_version: master #default is r6
+vulcan_version: "20220728" #default is "20210210"
+vapour_vulcan_version: r5 #default is r3
+lvsfunc_version: v0.7.0 #default is v0.1.0
 
 ##enable CUDA Support for Scripts
 cuda_enable: true #default is false
