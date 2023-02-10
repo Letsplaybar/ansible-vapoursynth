@@ -1,5 +1,5 @@
 ---
 - name: "Download mvsfunc Skript"
   get_url:
-    url: "https://raw.githubusercontent.com/HomeOfVapourSynthEvolution/mvsfunc/master/mvsfunc.py"
+    url: "https://raw.githubusercontent.com/HomeOfVapourSynthEvolution/mvsfunc/master/mvsfunc/mvsfunc.py"
     dest: "/opt/vapour-scripts/mvsfunc.py"
